@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Q2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>index</servlet-name>
+    <jsp-file>/WEB-INF/views/index.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>index</servlet-name>
+    <url-pattern>/index.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ShowTicket</servlet-name>
+    <jsp-file>/WEB-INF/views/ShowTicket.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowTicket</servlet-name>
+    <url-pattern>/ShowTicket</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>errorShow</servlet-name>
+    <jsp-file>/WEB-INF/views/errorShow.jsp</jsp-file>
+  </servlet>
+   <servlet>
+   	<description>
+   	</description>
+   	<display-name>TicketServlet</display-name>
+   	<servlet-name>TicketServlet</servlet-name>
+   	<servlet-class>easy_railTicketing.TicketServlet</servlet-class>
+   </servlet>
+  <servlet-mapping>
+    <servlet-name>errorShow</servlet-name>
+    <url-pattern>/errorShow</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TicketServlet</servlet-name>
+  	<url-pattern>/TicketServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
